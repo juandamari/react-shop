@@ -30,7 +30,7 @@ module.exports = {
                 ],
             },
             {
-                test: /\.s[ac]ss$/i, // test for .sass files
+                test: /\.(css|scss)$/, // test for .sass y css files
                 use: [
                     "style-loader",
                     "css-loader",
