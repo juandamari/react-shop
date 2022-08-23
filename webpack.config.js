@@ -6,7 +6,8 @@ module.exports = {
     entry: './src/index.js', // entry point of the application
     output: {
         path: path.resolve(__dirname, 'dist'), // output directory
-        filename: 'bundle.js' // output file name
+        filename: 'bundle.js', // output file name
+        publicPath: '/'
     },
     mode: 'development', // development or production is de warning in screen
     resolve: {
@@ -55,5 +56,6 @@ module.exports = {
           compress: true,
           port: 3005,
           open: true,
+          historyApiFallback: true,
         }
 }
