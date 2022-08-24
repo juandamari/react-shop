@@ -5,20 +5,23 @@ import Login from '../containers/login';
 import '../styles/global.css';
 import RecoveryPassword from '../components/recoveryPassword';
 import Home from '../pages/home';
+import NotFound from '../pages/NotFound';
 
 const App = () => {
 	return (
 		<BrowserRouter>
-		<switch>
-			<Layout>
-				<Route exact path="/" element={ <Home></Home> }></Route>
-				<Route exact path="/login" element={ <Login /> } /> {/* es la forma actual de llamar el componente */}
-				<Route exact path="recoveryPassword" element={ <RecoveryPassword /> } />
-				<Route element={ <NotFound></NotFound> } ></Route>
+		   <Layout>
+				<switch>
+				<Routes>
+				   <Route exact path="/" element={ <Home /> } ></Route>
+				   <Route exact path="/login" element={ <Login /> } /> {/* es la forma actual de llamar el componente */}
+				   <Route exact path="/recoveryPassword" element={ <RecoveryPassword /> } />
+				   <Route path="*" element={ <NotFound /> } ></Route>				
+				</Routes>
+				</switch>
 			</Layout>
-		</switch>
 		</BrowserRouter>		
-	);
+	)
 }
 
 export default App;
