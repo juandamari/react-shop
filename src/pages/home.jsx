@@ -1,9 +1,9 @@
 import React from "react";
-import header from "../components/header";
+import Header from "../components/Header";
 
 const Home = () => {
     return (
-        <header />
+        <Header />
     );   
 }
 
