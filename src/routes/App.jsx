@@ -1,39 +1,37 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from '../containers/layout';
-import Login from '../pages/login';
-import '../styles/global.css';
-import RecoveryPassword from '../pages/recoveryPassword';
+import Checkout from '../pages/checkout';
+import CreateAccount from '../pages/CreateAccount';
 import Home from '../pages/home';
+import Login from '../pages/login';
+import MyAccount from '../pages/MyAcount';
+import NewPassword from '../pages/NewPassword';
 import NotFound from '../pages/NotFound';
-import CreateAcount from '../pages/CreateAcount';
-import Product from '../pages/Products';
-import Desktop from '../pages/Desktop-Menu';
-import Mobile_Menu from '../components/Mobile-Menu';
-import My_order from '../components/My-order';
-import Product_detail from '../components/Product-detail';
-import My_orderM from '../components/my-orderM';
+import Orders from '../pages/order';
+import PasswordRecovery from '../pages/recoveryPassword';
+import SendEmail from '../pages/SendEmail';
+
+import '../styles/global.css';
+
 
 const App = () => {
 	return (
 		<BrowserRouter>
-		   <Layout>
-				<switch>
-				<Routes>
-				   <Route exact path="/" element={ <Home /> } ></Route>
-				   <Route exact path="/login" element={ <Login /> } /> {/* es la forma actual de llamar el componente */}
-				   <Route exact path="/recoveryPassword" element={ <RecoveryPassword /> } />
-				   <Route exact path="/createacount" element={ <CreateAcount />} />
-				   <Route exact path="/Products" element={ <Product/>} />
-				   <Route exact path="/Mobile-menu" element={ <Mobile_Menu/>} />
-				   <Route exact path="/My-order" element={ <My_order/>} />
-				   <Route exact path="/Product-detail" element={ <Product_detail/>} />
-				   <Route exact path="/Desktop-Menu" element={ <Desktop/>} />
-				   <Route exact path="/My-orderM" element={ <My_orderM/>} />
-				   <Route path="*" element={ <NotFound /> } ></Route>				
-				</Routes>
-				</switch>
-			</Layout>
+		<Layout>
+			<Routes>
+			<Route exact path="/" component={ <Home/> } />
+					<Route exact path="/login" component={ <Login/> } />
+					<Route exact path="/password-recovery" component={ <PasswordRecovery/> } />
+					<Route exact path="/send-email" component={ <SendEmail/> } />
+					<Route exact path="/new-password" component={ <NewPassword/> } />
+					<Route exact path="/account" component={ <MyAccount/> } />
+					<Route exact path="/signup" component={ <CreateAccount/> } />
+					<Route exact path="/checkout" component={ <Checkout/> } />
+					<Route exact path="/orders" component={ <Orders/> } />
+					<Route path="*" component={ <NotFound/> } />
+			</Routes>
+		</Layout>
 		</BrowserRouter>		
 	)
 }
