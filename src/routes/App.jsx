@@ -20,20 +20,20 @@ const App = () => {
 		<BrowserRouter>
 		<Layout>
 			<Routes>
-			<Route exact path="/" component={ <Home/> } />
-					<Route exact path="/login" component={ <Login/> } />
-					<Route exact path="/password-recovery" component={ <PasswordRecovery/> } />
-					<Route exact path="/send-email" component={ <SendEmail/> } />
-					<Route exact path="/new-password" component={ <NewPassword/> } />
-					<Route exact path="/account" component={ <MyAccount/> } />
-					<Route exact path="/signup" component={ <CreateAccount/> } />
-					<Route exact path="/checkout" component={ <Checkout/> } />
-					<Route exact path="/orders" component={ <Orders/> } />
-					<Route path="*" component={ <NotFound/> } />
+			    	<Route exact path="/" element={ <Home/> } />
+					<Route exact path="/Login" element={ <Login/> } />
+					<Route exact path="/Password-recovery" element={ <PasswordRecovery/> } />
+					<Route exact path="/Send-email" element={ <SendEmail/> } />
+					<Route exact path="/New-password" element={ <NewPassword/> } />
+					<Route exact path="/Account" element={ <MyAccount/> } />
+					<Route exact path="/Signup" element={ <CreateAccount/> } />
+					<Route exact path="/Checkout" element={ <Checkout/> } />
+					<Route exact path="/Orders" element={ <Orders/> } />
+					<Route path="*" element={ <NotFound/> } />
 			</Routes>
 		</Layout>
 		</BrowserRouter>		
-	)
+	);
 }
 
 export default App;
