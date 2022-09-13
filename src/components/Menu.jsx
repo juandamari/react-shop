@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/Desktop.scss';
+import '../styles/Menu.scss';
 
 const Desktop = () => {
     return(

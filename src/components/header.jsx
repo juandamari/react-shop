@@ -1,7 +1,7 @@
 import React from "react";
-import '../styles/header.scss'
+import '../styles/Header.scss'
 
-const header = () => {
+const Header = () => {
     return (
         <nav>
             <img src="./icons/icon_menu.svg" alt="menu" className="menu" />
@@ -33,7 +33,7 @@ const header = () => {
                     <li className="navbar-email">platzi@example.com</li>
                     <li className="navbar-shopping-cart">
                         <img src="./icons/icon_shopping_cart.svg" alt="shopping cart" />
-                        <div div>2</div>
+                        <div>2</div>
                     </li>
                </ul>
             </div>
@@ -41,4 +41,4 @@ const header = () => {
     );
 }
 
-export default header;
+export default Header;
