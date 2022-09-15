@@ -1,12 +1,14 @@
 import React from "react";
-import '../styles/Header.scss'
+import '@styles/Header.scss';
+const menu = '@icons/icon_menu.svg';
+const logo= '@logo/logo_yard_sale.svg'
 
 const Header = () => {
     return (
         <nav>
-            <img src="./icons/icon_menu.svg" alt="menu" className="menu" />
+            <img src={menu} alt="menu" className="menu" />
             <div className="navbar-left">
-                <img src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
+                <img src={logo} alt="logo" className="nav-logo" />
                 <ul>
                     <li>
                         <a href="/">All</a>
