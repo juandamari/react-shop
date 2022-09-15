@@ -1,12 +1,11 @@
 import React from "react";
-import Header from "@components/Header";
-import '@styles/vars.scss';
+import Header from "../components/Header";
 
 const Layout = ({ children }) => {
   return (
-    <div className="Layout"> 
+    <div className="Layout">
     <Header />
-    {children} 
+    {children}
     </div>
   );
 }
